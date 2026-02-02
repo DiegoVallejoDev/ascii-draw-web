@@ -289,10 +289,10 @@ This license was chosen to maintain compatibility with the [original ASCII Draw 
 
 ## 🔗 Links
 
-- **Live Demo**: [https://your-username.github.io/ascii-draw-web](https://your-username.github.io/ascii-draw-web)
+- **Live Demo**: Coming soon...
 - **Original Project**: [https://github.com/Nokse22/ascii-draw](https://github.com/Nokse22/ascii-draw)
-- **Report Bug**: [GitHub Issues](https://github.com/your-username/ascii-draw-web/issues)
-- **Request Feature**: [GitHub Issues](https://github.com/your-username/ascii-draw-web/issues)
+- **Report Bug**: [GitHub Issues](https://github.com/DiegoVallejoDev/ascii-draw-web/issues)
+- **Request Feature**: [GitHub Issues](https://github.com/DiegoVallejoDev/ascii-draw-web/issues)
 
 ---
 

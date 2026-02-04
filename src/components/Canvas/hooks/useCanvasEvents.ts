@@ -20,7 +20,6 @@ export function useCanvasEvents({ canvasRef, screenToGrid }: UseCanvasEventsProp
     clearPreview, 
     primaryChar, 
     secondaryChar, 
-    styleIndex,
     startChange,
     commitChange,
     primitives,
@@ -28,9 +27,6 @@ export function useCanvasEvents({ canvasRef, screenToGrid }: UseCanvasEventsProp
   
   const { activeTool, dragState, startDrag, updateDrag, endDrag } = useToolStore();
 
-
-  // Get current line style
-  const style = LINE_STYLES[styleIndex];
 
   // Handle drawing for freehand tool
   const handleFreehandDraw = useCallback((gridX: number, gridY: number, char: string) => {
@@ -47,6 +43,9 @@ export function useCanvasEvents({ canvasRef, screenToGrid }: UseCanvasEventsProp
     filled: boolean = false
   ) => {
     const bounds = getBounds({ x: startX, y: startY }, { x: endX, y: endY });
+    // Get fresh style from store to avoid stale closure
+    const currentStyleIndex = useCanvasStore.getState().styleIndex;
+    const currentStyle = LINE_STYLES[currentStyleIndex];
     
     if (filled) {
       // Draw filled rectangle
@@ -62,11 +61,11 @@ export function useCanvasEvents({ canvasRef, screenToGrid }: UseCanvasEventsProp
         bounds.y,
         bounds.width,
         bounds.height,
-        style,
+        currentStyle,
         toDrawing
       );
     }
-  }, [setCharAt, primitives, style, primaryChar]);
+  }, [setCharAt, primitives, primaryChar]);
 
   // Handle line drawing
   const handleLine = useCallback((
@@ -76,8 +75,11 @@ export function useCanvasEvents({ canvasRef, screenToGrid }: UseCanvasEventsProp
     endY: number,
     toDrawing: boolean
   ) => {
-    primitives?.drawLine(startX, startY, endX, endY, style.horizontal, toDrawing);
-  }, [primitives, style]);
+    // Get fresh style from store to avoid stale closure
+    const currentStyleIndex = useCanvasStore.getState().styleIndex;
+    const currentStyle = LINE_STYLES[currentStyleIndex];
+    primitives?.drawLine(startX, startY, endX, endY, currentStyle.horizontal, toDrawing);
+  }, [primitives]);
 
   // Handle flood fill
   const handleFloodFill = useCallback((x: number, y: number, char: string) => {

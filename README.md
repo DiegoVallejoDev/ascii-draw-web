@@ -23,7 +23,7 @@
   
   <br/>
   
-  <img src="docs/screenshot.png" width="800" alt="ASCII Draw Web Interface"/>
+  <img src="docs/screenshot.png" width="600" alt="ASCII Draw Web Interface"/>
 </div>
 
 ---
@@ -48,19 +48,19 @@ Whether you're creating technical diagrams, flowcharts, documentation visuals, o
 
 ### 🛠️ Comprehensive Tool Set
 
-| Tool | Description | Shortcut |
-|------|-------------|----------|
-| **Rectangle** | Draw rectangles with multiple line styles | `Ctrl+R` |
-| **Filled Rectangle** | Rectangles with customizable border/fill characters | `Ctrl+Shift+R` |
-| **Line** | Cartesian, freehand, and stepped lines with optional arrows | `Ctrl+L` |
-| **Freehand Brush** | Natural drawing with adjustable brush sizes | `Ctrl+F` |
-| **Text** | Plain text and stylized FIGlet fonts | `Ctrl+T` |
-| **Table** | Professional table formatting with multiple styles | `Ctrl+B` |
-| **Tree View** | Hierarchical tree structures from indented text | `Ctrl+Y` |
-| **Eraser** | Variable-size eraser tool | `Ctrl+E` |
-| **Flood Fill** | Fill areas with chosen characters | `Ctrl+Shift+F` |
-| **Select/Move** | Selection with move, rotate, copy, and delete | `Ctrl+M` |
-| **Character Picker** | Pick characters directly from the canvas | `Ctrl+P` |
+| Tool                 | Description                                                 | Shortcut       |
+| -------------------- | ----------------------------------------------------------- | -------------- |
+| **Rectangle**        | Draw rectangles with multiple line styles                   | `Ctrl+R`       |
+| **Filled Rectangle** | Rectangles with customizable border/fill characters         | `Ctrl+Shift+R` |
+| **Line**             | Cartesian, freehand, and stepped lines with optional arrows | `Ctrl+L`       |
+| **Freehand Brush**   | Natural drawing with adjustable brush sizes                 | `Ctrl+F`       |
+| **Text**             | Plain text and stylized FIGlet fonts                        | `Ctrl+T`       |
+| **Table**            | Professional table formatting with multiple styles          | `Ctrl+B`       |
+| **Tree View**        | Hierarchical tree structures from indented text             | `Ctrl+Y`       |
+| **Eraser**           | Variable-size eraser tool                                   | `Ctrl+E`       |
+| **Flood Fill**       | Fill areas with chosen characters                           | `Ctrl+Shift+F` |
+| **Select/Move**      | Selection with move, rotate, copy, and delete               | `Ctrl+M`       |
+| **Character Picker** | Pick characters directly from the canvas                    | `Ctrl+P`       |
 
 ### 🎨 Line Styles
 
@@ -70,31 +70,6 @@ Choose from multiple box-drawing character sets:
 ┌─────────┐  ┏━━━━━━━━━┓  ╔═════════╗  ╭─────────╮  +---------+
 │  Light  │  ┃  Heavy  ┃  ║ Double  ║  │ Rounded │  |  ASCII  |
 └─────────┘  ┗━━━━━━━━━┛  ╚═════════╝  ╰─────────╯  +---------+
-```
-
-### 📝 FIGlet Text Support
-
-Transform plain text into stylized ASCII art:
-
-```
-    _    ____   ____ ___ ___   ____                     
-   / \  / ___| / ___|_ _|_ _| |  _ \ _ __ __ ___      __
-  / _ \ \___ \| |    | | | |  | | | | '__/ _` \ \ /\ / /
- / ___ \ ___) | |___ | | | |  | |_| | | | (_| |\ V  V / 
-/_/   \_\____/ \____|___|___| |____/|_|  \__,_| \_/\_/  
-```
-
-### 📊 Tables & Trees
-
-Create professional tables and hierarchical structures:
-
-```
-┌────────┬─────────┬────────┐     project/
-│ Name   │ Status  │ Owner  │     ├── src/
-├────────┼─────────┼────────┤     │   ├── components/
-│ Task 1 │ Done    │ Alice  │     │   ├── utils/
-│ Task 2 │ Pending │ Bob    │     │   └── index.ts
-└────────┴─────────┴────────┘     └── README.md
 ```
 
 ### ⚡ Additional Features
@@ -113,7 +88,7 @@ Create professional tables and hierarchical structures:
 
 **[Try ASCII Draw Web →](https://your-username.github.io/ascii-draw-web)**
 
-> *No signup required. Start drawing immediately!*
+> _No signup required. Start drawing immediately!_
 
 ---
 
@@ -165,17 +140,17 @@ npm run preview
 
 ### Keyboard Shortcuts
 
-| Action | Shortcut |
-|--------|----------|
-| Undo | `Ctrl+Z` |
-| Redo | `Ctrl+Shift+Z` |
-| Copy to Clipboard | `Ctrl+C` |
-| New Canvas | `Ctrl+N` |
-| Save | `Ctrl+S` |
-| Open | `Ctrl+O` |
-| Zoom In | `Ctrl++` |
-| Zoom Out | `Ctrl+-` |
-| Reset Zoom | `Ctrl+0` |
+| Action            | Shortcut       |
+| ----------------- | -------------- |
+| Undo              | `Ctrl+Z`       |
+| Redo              | `Ctrl+Shift+Z` |
+| Copy to Clipboard | `Ctrl+C`       |
+| New Canvas        | `Ctrl+N`       |
+| Save              | `Ctrl+S`       |
+| Open              | `Ctrl+O`       |
+| Zoom In           | `Ctrl++`       |
+| Zoom Out          | `Ctrl+-`       |
+| Reset Zoom        | `Ctrl+0`       |
 
 ### Exporting Your Work
 
@@ -261,7 +236,7 @@ Contributions are welcome! Whether you're fixing bugs, adding features, or impro
 
 This project is a web-based port of **[ASCII Draw](https://github.com/Nokse22/ascii-draw)** by **[Nokse22](https://github.com/Nokse22)**.
 
-> *ASCII Draw is a powerful and intuitive GTK4/Python application that lets you draw diagrams, tables, tree views, art and more using only characters.*
+> _ASCII Draw is a powerful and intuitive GTK4/Python application that lets you draw diagrams, tables, tree views, art and more using only characters._
 
 We are deeply grateful to Nokse22 for creating such an excellent open-source tool and for licensing it under GPL-3.0, which made this port possible.
 
@@ -282,8 +257,6 @@ We are deeply grateful to Nokse22 for creating such an excellent open-source too
 ## 📄 License
 
 This project is licensed under the **GNU General Public License v3.0** — see the [LICENSE](LICENSE) file for details.
-
-This license was chosen to maintain compatibility with the [original ASCII Draw project](https://github.com/Nokse22/ascii-draw), which is also licensed under GPL-3.0.
 
 ---
 

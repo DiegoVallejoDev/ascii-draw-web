@@ -1,0 +1,20 @@
+{
+  "name": "ASCII Draw Web",
+  "short_name": "ASCII Draw",
+  "description": "A web-based ASCII art drawing application",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e293b",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["graphics", "utilities", "productivity"],
+  "lang": "en",
+  "orientation": "any"
+}

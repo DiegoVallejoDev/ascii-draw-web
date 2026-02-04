@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Custom Properties for theming */
+:root {
+  /* Canvas colors - Light mode */
+  --color-canvas-bg: #ffffff;
+  --color-canvas-grid: rgba(0, 0, 0, 0.08);
+  --color-canvas-text: #1e293b;
+  --color-canvas-preview: #3b82f6;
+
+  /* UI colors */
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-secondary: #64748b;
+
+  /* Spacing */
+  --toolbar-width: 3.5rem;
+  --sidebar-width: 280px;
+  --header-height: 3rem;
+}
+
+.dark {
+  /* Canvas colors - Dark mode */
+  --color-canvas-bg: #1e293b;
+  --color-canvas-grid: rgba(255, 255, 255, 0.08);
+  --color-canvas-text: #f1f5f9;
+  --color-canvas-preview: #60a5fa;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Monospace font for canvas */
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Canvas cursor */
+.canvas-crosshair {
+  cursor: crosshair;
+}
+
+/* Tool button active state */
+.tool-active {
+  @apply bg-blue-500 text-white;
+}
+
+/* Sidebar panel styling */
+.sidebar-panel {
+  @apply p-4 border-b border-gray-200 dark:border-gray-700;
+}
+
+.sidebar-panel-title {
+  @apply text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3;
+}
+
+/* Character grid button */
+.char-button {
+  @apply w-8 h-8 flex items-center justify-center
+         text-lg font-mono rounded
+         hover:bg-gray-100 dark:hover:bg-gray-700
+         focus:outline-none focus:ring-2 focus:ring-blue-500
+         transition-colors;
+}
+
+.char-button:active {
+  @apply bg-blue-100 dark:bg-blue-900;
+}
+
+/* Tooltip */
+.tooltip {
+  @apply invisible opacity-0 absolute z-50 
+         px-2 py-1 text-xs font-medium
+         text-white bg-gray-900 dark:bg-gray-700
+         rounded shadow-lg
+         transition-all duration-200
+         pointer-events-none;
+}
+
+.tooltip-trigger:hover .tooltip {
+  @apply visible opacity-100;
+}
+
+/* Animation for preview layer */
+@keyframes preview-pulse {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.preview-pulse {
+  animation: preview-pulse 1s ease-in-out infinite;
+}
+
+/* Utility classes */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Focus visible for accessibility */
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2;
+}
